@@ -1,0 +1,116 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --naw3eya-primary: #2563EB;
+  --naw3eya-secondary: #14B8A6;
+  --naw3eya-accent: #F59E0B;
+  --naw3eya-bg: #F8FAFC;
+  --naw3eya-surface: #FFFFFF;
+  --naw3eya-text: #0F172A;
+  --naw3eya-muted: #64748B;
+  --naw3eya-border: #E2E8F0;
+  --naw3eya-container-max: 72rem;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    direction: ltr;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--naw3eya-bg);
+    color: var(--naw3eya-text);
+    font-family: var(--font-naw3eya-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--naw3eya-text);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  [tabindex] {
+    outline-color: var(--naw3eya-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--naw3eya-primary);
+    outline-offset: 2px;
+  }
+}
+
+.naw3eya-prose {
+  max-width: 68ch;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--naw3eya-text);
+}
+
+.naw3eya-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--naw3eya-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 180ms ease;
+}
+
+.naw3eya-btn-primary:hover {
+  background-color: #1D4ED8;
+}
+
+.naw3eya-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--naw3eya-border);
+  background-color: var(--naw3eya-surface);
+  color: var(--naw3eya-text);
+  font-weight: 600;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.naw3eya-btn-secondary:hover {
+  background-color: var(--naw3eya-bg);
+  border-color: var(--naw3eya-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
